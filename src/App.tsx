@@ -1,13 +1,15 @@
 import './App.css';
-import {Header} from "./layout/Header";
+import {Header} from "./layout/header/Header";
+import {Main} from "./layout/sections/Main";
 
 
 function App() {
-    return (
-        <div className="App">
-            <Header />
-        </div>
-    );
+  return (
+    <div className="App">
+      <Header/>
+      <Main/>
+    </div>
+  );
 }
 
 export default App;
