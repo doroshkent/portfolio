@@ -1,41 +1,32 @@
+import { Button } from 'components/button/Button';
 import { Text } from 'components/Text';
 import React from 'react';
 import styled from "styled-components";
 
 type WorkPropsType = {
   src: string
-  title: string
   description: string
 }
 
-export const Work = (props: WorkPropsType) => {
+export const Project = (props: WorkPropsType) => {
   return (
-    <StyledWork>
+    <StyledProject>
       <Image src={props.src}/>
-      <WorkTitle>{props.title}</WorkTitle>
       <Text>{props.description}</Text>
-      <Link href={"#"}>demo</Link>
-      <Link href={"#"}>code</Link>
-    </StyledWork>
+      <Button as={"a"} href={"#"}>demo</Button>
+      <Button as={"a"} href={"#"}>code</Button>
+    </StyledProject>
   );
 };
 
-const StyledWork = styled.div`
+const StyledProject = styled.div`
   background-color: #bf7ef3;
-  max-width: 540px;
+  max-width: 380px;
   width: 100%;
 `
 
 const Image = styled.img`
-  height: 260px;
+  height: 276px;
   width: 100%;
   object-fit: cover;
-`
-
-const WorkTitle = styled.h3`
-
-`
-
-const Link = styled.a`
-
 `
