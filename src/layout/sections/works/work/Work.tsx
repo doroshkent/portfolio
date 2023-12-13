@@ -1,4 +1,4 @@
-import { StyledText } from 'components/StyledText';
+import { Text } from 'components/Text';
 import React from 'react';
 import styled from "styled-components";
 
@@ -13,7 +13,7 @@ export const Work = (props: WorkPropsType) => {
     <StyledWork>
       <Image src={props.src}/>
       <WorkTitle>{props.title}</WorkTitle>
-      <StyledText>{props.description}</StyledText>
+      <Text>{props.description}</Text>
       <Link href={"#"}>demo</Link>
       <Link href={"#"}>code</Link>
     </StyledWork>

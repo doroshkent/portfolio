@@ -3,7 +3,7 @@ import photo from 'assets/img/photo.webp'
 import styled from "styled-components";
 import { FlexWrapper } from 'components/FlexWrapper';
 import { Button } from "components/button/Button";
-import { StyledText } from "components/StyledText";
+import { Text } from "components/Text";
 
 export const Main = () => {
   return (
@@ -12,7 +12,7 @@ export const Main = () => {
         <div>
           <span>Hi👋, I’m a </span>
           <MainHeading>front-end developer</MainHeading>
-          <StyledText>I’m Anastasiya Darashkevich, a developer dedicated to making the world a better place one line of code at a time.</StyledText>
+          <Text>I’m Anastasiya Darashkevich, a developer dedicated to making the world a better place one line of code at a time.</Text>
           <Button>Hire me</Button>
         </div>
         <Photo src={photo} alt={"My photo"} />

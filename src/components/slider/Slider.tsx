@@ -1,4 +1,4 @@
-import { StyledText } from 'components/StyledText';
+import { Text } from 'components/Text';
 import React from 'react';
 import styled from "styled-components";
 import { FlexWrapper } from "components/FlexWrapper";
@@ -8,8 +8,8 @@ export const Slider = () => {
     <StyledSlider>
       <Slide>
         <FlexWrapper direction={"column"}>
-          <StyledText>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-            et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</StyledText>
+          <Text>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
+            et dolore magna aliqua Ut enim. Lorem ipsum dolor sit amet, consectetur adipisicing elit.</Text>
           <Name>@ivan ivanow</Name>
         </FlexWrapper>
         <Pagination>
