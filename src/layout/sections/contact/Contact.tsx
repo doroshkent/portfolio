@@ -2,17 +2,21 @@ import React from 'react';
 import styled from "styled-components";
 import { SectionTitle } from "components/SectionTitle";
 import { Button } from "components/button/Button";
+import { FlexWrapper } from "components/FlexWrapper";
+import contactImg from "assets/img/contacts.svg"
 
 export const Contact = () => {
   return (
     <StyledContact>
-      <SectionTitle>Contact</SectionTitle>
-      <StyledForm>
-        <Field placeholder={"name"}/>
-        <Field placeholder={"subject"}/>
-        <Field placeholder={"message"} as={"textarea"}/>
-        <Button type={"submit"}>Send Message</Button>
-      </StyledForm>
+      <SectionTitle>Contact me</SectionTitle>
+      <FlexWrapper justify={"space-around"}>
+        <img src={contactImg} alt="decorative image"/>
+        <StyledForm>
+          <Field type={"email"} placeholder={"Enter email address"}/>
+          <Field placeholder={"Enter message..."} as={"textarea"}/>
+          <Button type={"submit"}>Send Message</Button>
+        </StyledForm>
+      </FlexWrapper>
     </StyledContact>
   );
 };
