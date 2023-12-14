@@ -16,7 +16,7 @@ export const Footer = () => {
             { iconsItems.map((item, index) => {
               return <SocialItem key={ index }>
                 <SocialLink>
-                  <Icon iconId={ item } height={ "30px" } width={ "30px" } viewBox={ "0 0 30px 30px" }/>
+                  <Icon iconId={ item } height={ "30" } width={ "30" } viewBox={ "0 0 30 30" }/>
                 </SocialLink>
               </SocialItem>
             }) }

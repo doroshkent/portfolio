@@ -4,12 +4,12 @@ import styled from "styled-components";
 
 export const Logo = () => {
   return (
-    <a href="">
+    <a href="#">
       <StyledLogo src={logo} alt="logo"/>
     </a>
   );
 };
 
 const StyledLogo = styled.img`
-  width: 90px;
+  height: 90px;
 `
