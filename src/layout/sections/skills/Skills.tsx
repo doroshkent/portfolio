@@ -59,7 +59,7 @@ export const Skills = () => {
             })}
           </FlexWrapper>
         </div>
-        <img src={skillsImg} alt=""/>
+        <img src={skillsImg} alt="" aria-hidden/>
       </FlexWrapper>
     </StyledSkills>
   );

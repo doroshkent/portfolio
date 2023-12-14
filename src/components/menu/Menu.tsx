@@ -4,9 +4,9 @@ import styled from "styled-components";
 export const Menu = (props: {menuItems: Array<string>}) => {
   return (
     <StyledMenu>
-      <ul>
+      <ul role="menu">
         {props.menuItems.map((item, index) => {
-          return <li key={index}>
+          return <li key={index} role="menuitem">
             <a href="">{ item }</a>
           </li>
         })}

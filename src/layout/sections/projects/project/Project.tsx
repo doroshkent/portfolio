@@ -11,7 +11,7 @@ type WorkPropsType = {
 export const Project = (props: WorkPropsType) => {
   return (
     <StyledProject>
-      <Image src={props.src}/>
+      <Image src={props.src} alt={"project screenshot"}/>
       <Text>{props.description}</Text>
       <Button as={"a"} href={"#"}>demo</Button>
       <Button as={"a"} href={"#"}>code</Button>

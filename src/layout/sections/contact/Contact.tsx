@@ -10,7 +10,7 @@ export const Contact = () => {
     <StyledContact>
       <SectionTitle>Contact me</SectionTitle>
       <FlexWrapper justify={"space-around"}>
-        <img src={contactImg} alt="decorative image"/>
+        <img src={contactImg} alt="" aria-hidden/>
         <StyledForm>
           <Field type={"email"} placeholder={"Enter email address"}/>
           <Field placeholder={"Enter message..."} as={"textarea"}/>
