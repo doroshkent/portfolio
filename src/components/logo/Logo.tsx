@@ -11,5 +11,5 @@ export const Logo = () => {
 };
 
 const StyledLogo = styled.img`
-  height: 90px;
+  height: 75px;
 `
