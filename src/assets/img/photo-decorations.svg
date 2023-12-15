@@ -1,0 +1,27 @@
+<svg width="413" height="488" viewBox="0 0 413 488" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="297.5" cy="426.5" r="7.5" fill="#E84949"/>
+  <circle cx="345.5" cy="426.5" r="7.5" fill="#E84949"/>
+  <circle cx="393.5" cy="426.5" r="7.5" fill="#E84949"/>
+  <circle cx="297.5" cy="453.5" r="7.5" fill="#E84949"/>
+  <circle cx="345.5" cy="453.5" r="7.5" fill="#E84949"/>
+  <circle cx="393.5" cy="453.5" r="7.5" fill="#E84949"/>
+  <circle cx="297.5" cy="480.5" r="7.5" fill="#E84949"/>
+  <circle cx="345.5" cy="480.5" r="7.5" fill="#E84949"/>
+  <circle cx="393.5" cy="480.5" r="7.5" fill="#E84949"/>
+  <path d="M39.8303 33.7771L27.5354 49.4648L39.8303 67.0448" stroke="#4F47C8" stroke-width="3"/>
+  <path d="M39.8302 65.4792L27.5354 81.167L39.8302 98.747" stroke="#4F47C8" stroke-width="3"/>
+  <path d="M39.8302 99.1383L27.5354 114.826L39.8302 132.406" stroke="#4F47C8" stroke-width="3"/>
+  <path d="M27.5354 33.7771L15.2406 49.4648L27.5354 67.0448" stroke="#4F47C8" stroke-width="3"/>
+  <path d="M27.5355 65.4792L15.2407 81.167L27.5355 98.747" stroke="#4F47C8" stroke-width="3"/>
+  <path d="M27.5355 99.1383L15.2407 114.826L27.5355 132.406" stroke="#4F47C8" stroke-width="3"/>
+  <path d="M14.2948 33.7771L1.99992 49.4648L14.2948 67.0448" stroke="#4F47C8" stroke-width="3"/>
+  <path d="M14.2947 65.4792L1.99981 81.167L14.2947 98.747" stroke="#4F47C8" stroke-width="3"/>
+  <path d="M14.2947 99.1383L1.99981 114.826L14.2947 132.406" stroke="#4F47C8" stroke-width="3"/>
+  <path d="M376.682 10.9993L392.734 1.73217L408.785 10.9993V29.5334L392.734 38.8005L376.682 29.5334V10.9993Z" stroke="#4F47C8" stroke-width="3"/>
+  <line y1="-1.5" x2="19.5303" y2="-1.5" transform="matrix(0.869285 0.494311 -0.486898 0.873459 376.219 10.9807)" stroke="#4F47C8" stroke-width="3"/>
+  <line y1="-1.5" x2="20.2702" y2="-1.5" transform="matrix(0.0197981 0.999804 -0.999796 0.0201959 392.132 19.4558)" stroke="#4F47C8" stroke-width="3"/>
+  <line y1="-1.5" x2="20.0918" y2="-1.5" transform="matrix(0.865971 -0.500095 0.492651 0.870227 392.701 20.9816)" stroke="#4F47C8" stroke-width="3"/>
+  <circle cx="35.3725" cy="467.474" r="9.30865" stroke="#4F47C8" stroke-width="3"/>
+  <line x1="178.438" y1="27.0216" x2="178.438" y2="-2.47955e-05" stroke="#E84949" stroke-width="3"/>
+  <line x1="166.427" y1="12.0109" x2="192.773" y2="12.0109" stroke="#E84949" stroke-width="3"/>
+</svg>

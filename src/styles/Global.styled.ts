@@ -36,10 +36,10 @@ export const GlobalStyle = createGlobalStyle`
   
   section:first-of-type,
   section:nth-of-type(even) {
-    background-color: ${theme.colors.primaryBg};
+    background-color: ${theme.colors.primary};
   }
   
   section:nth-of-type(2n+3){
-    background-color: ${theme.colors.secondaryBg};
+    background-color: ${theme.colors.secondary};
   }
 `
