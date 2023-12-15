@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 type FlexWrapperPropsType = {
   direction?: "row" | "row-reverse" | "column" | "column-reverse"
-  justify?: "flex-start" | "flex-end" | "space-around" | "space-between" | "space-evenly"
+  justify?: "flex-start" | "flex-end" | "space-around" | "space-between" | "space-evenly" | "center"
   align?: "flex-start" | "flex-end" | "center" | "stretch"
   wrap?: "nowrap" | "wrap" | "wrap-reverse"
   gap?: string

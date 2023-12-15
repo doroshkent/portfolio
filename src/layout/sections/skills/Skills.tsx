@@ -3,8 +3,8 @@ import { FlexWrapper } from "components/FlexWrapper";
 import styled from "styled-components";
 import { SectionTitle } from "components/SectionTitle";
 import { Skill } from "layout/sections/skills/Skill/Skill";
-import { Text } from "components/Text";
 import skillsImg from "assets/img/skills.svg"
+import { Container } from "components/Container";
 
 const skills = [
   {
@@ -49,23 +49,36 @@ const skills = [
 export const Skills = () => {
   return (
     <StyledSkills>
-      <SectionTitle>Skills</SectionTitle>
-      <FlexWrapper justify={ "space-between" }>
-        <div>
-          <Text>I have a vast experience in the following web technologies:</Text>
-          <FlexWrapper wrap={"wrap"} gap={"42px"}>
-            {skills.map(skill => {
-              return <Skill iconId={skill.iconId} title={skill.title} />
-            })}
-          </FlexWrapper>
-        </div>
-        <img src={skillsImg} alt="" aria-hidden/>
-      </FlexWrapper>
+      <Container>
+        <SectionTitle>Skills</SectionTitle>
+        <FlexWrapper justify={ "space-between" } align={"center"}>
+          <SkillsWrapper>
+            <Text>I have a vast experience in the following web technologies:</Text>
+            <FlexWrapper wrap={ "wrap" } gap={ "44px" }>
+              { skills.map(skill => {
+                return <Skill iconId={ skill.iconId } title={ skill.title }/>
+              }) }
+            </FlexWrapper>
+          </SkillsWrapper>
+          <img src={ skillsImg } alt="" aria-hidden/>
+        </FlexWrapper>
+      </Container>
     </StyledSkills>
   );
 };
 
 const StyledSkills = styled.section`
-  min-height: 100vh;
-  background-color: #e3c6c6;
+  padding: 70px 0;
+`
+
+const SkillsWrapper = styled.div`
+  max-width: 600px;
+  width: 100%;
+`
+
+const Text = styled.p`
+  color: #818080;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 40px;
 `
