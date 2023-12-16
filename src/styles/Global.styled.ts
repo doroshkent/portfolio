@@ -42,4 +42,9 @@ export const GlobalStyle = createGlobalStyle`
   section:nth-of-type(2n+3){
     background-color: ${theme.colors.secondary};
   }
+  
+  p {
+    font-size: 18px;
+    font-weight: 400;
+  }
 `

@@ -2,7 +2,6 @@ import React from 'react';
 import styled from "styled-components";
 import { Icon } from "components/icon/Icon";
 import { FlexWrapper } from "components/FlexWrapper";
-import { Text } from "components/Text"
 
 const iconsItems = [ "gmail", "telegram", "linkedin" ]
 
@@ -46,5 +45,9 @@ const SocialItem = styled.li`
 `
 
 const SocialLink = styled.a`
+
+`
+
+const Text = styled.p`
 
 `

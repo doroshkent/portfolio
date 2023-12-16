@@ -78,7 +78,5 @@ const SkillsWrapper = styled.div`
 
 const Text = styled.p`
   color: #818080;
-  font-size: 18px;
-  font-weight: 400;
   margin-bottom: 40px;
 `

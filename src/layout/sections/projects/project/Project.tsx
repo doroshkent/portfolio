@@ -25,7 +25,6 @@ const StyledProject = styled.div`
   background-color: #262C4D;
   max-width: 380px;
   width: 100%;
-  min-height: 435px;
   
   border: 4px solid;
   border-image: repeating-linear-gradient( 290deg, #0D54BE, #20ECD3) 1;
@@ -34,8 +33,7 @@ const StyledProject = styled.div`
 const Text = styled.p`
   text-align: center;
   font-size: 16px;
-  font-weight: 400;
-  margin: 0 10px;
+  padding: 0 10px;
 `
 
 const Image = styled.img`
