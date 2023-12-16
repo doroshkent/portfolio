@@ -28,7 +28,6 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  background-color: #e5d398;
   min-height: 100vh;
   display: flex;
 `
@@ -72,7 +71,8 @@ const MainHeading = styled.h1`
 `
 
 const Text = styled.p`
-  color: rgba(0, 0, 0, 0.70);
+  color: ${theme.colors.primaryFont};
+  opacity: 0.7;
   margin: 30px 0;
   
   span {

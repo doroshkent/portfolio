@@ -7,12 +7,13 @@ import socialImg from "assets/img/proj-1.webp";
 import timerImg from "assets/img/proj-2.webp";
 import dashBoardImg from "assets/img/proj-3.webp"
 import { Container } from "components/Container";
+import { theme } from 'styles/Theme';
 
 export const Projects = () => {
   return (
     <StyledProjects>
       <Container>
-        <ProjectsTitle active>Projects</ProjectsTitle>
+        <ProjectsTitle active isWhite>Projects</ProjectsTitle>
         <Text>A select number of projects</Text>
         <FlexWrapper justify={"space-between"} wrap={"wrap"} gap={"2vw"}>
           <Project src={ socialImg }
@@ -29,16 +30,11 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
   padding: 30px 0 40px;
-  color: rgba(255, 255, 255, 0.87);
+  color: ${ theme.colors.tertiaryFont };
 `
 
 const ProjectsTitle = styled(SectionTitle)`
-  color: rgba(255, 255, 255, 0.87);
   margin-bottom: 8px;
-  
-  //шо тут как тут
-  &::before {
-  }
 `
 
 const Text = styled.p`
