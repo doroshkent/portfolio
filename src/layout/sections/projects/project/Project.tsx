@@ -22,7 +22,7 @@ export const Project = (props: WorkPropsType) => {
 };
 
 const StyledProject = styled.div`
-  background-color: #262C4D;
+  background-color: #262C4D; 
   max-width: 380px;
   width: 100%;
   
