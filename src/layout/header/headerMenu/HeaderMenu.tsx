@@ -1,7 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 import { theme } from "styles/Theme";
-import gears from "assets/img/gears.svg"
+import { Icon } from "components/icon/Icon";
+
 
 export const HeaderMenu = (props: {menuItems: Array<string>}) => {
   return (
@@ -9,6 +10,7 @@ export const HeaderMenu = (props: {menuItems: Array<string>}) => {
       <ul role="menu">
         {props.menuItems.map((item, index) => {
           return <ListItem key={index} role="menuitem">
+            <Icon iconId={"gears"} width="25" height="23" viewBox="0 0 25 23"/>
             <Link href="">{ item }</Link>
           </ListItem>
         })}
@@ -26,19 +28,20 @@ const StyledHeaderMenu = styled.nav`
 
 const ListItem = styled.li`
   position: relative; 
+  overflow: hidden;
 
-  &::before {
-    content: url("${gears}");
+  svg {
+    color: ${theme.colors.accent};
+    margin-right: 8px;
+    
     position: absolute;
-    top: 0; 
-    left: -30px; 
-    height: 100%;
-    visibility: hidden;
+    left: -100%;
   }
-
+  
   &:hover {
-    &::before {
-      visibility: visible;
+    overflow: visible;
+    svg {
+      left: -32px;
     }
   }
 `
