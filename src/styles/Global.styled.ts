@@ -17,7 +17,6 @@ export const GlobalStyle = createGlobalStyle`
     sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: ${theme.colors.primaryFont};
     line-height: 1.2;
   }
 
@@ -27,6 +26,7 @@ export const GlobalStyle = createGlobalStyle`
   
   a {
     text-decoration: none;
+    cursor: pointer;
   }
   
   button {
