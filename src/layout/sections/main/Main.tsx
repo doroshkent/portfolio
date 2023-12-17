@@ -30,6 +30,38 @@ export const Main = () => {
 const StyledMain = styled.section`
   min-height: 100vh;
   display: flex;
+  overflow: hidden;
+  
+  position: relative;
+  z-index: 1;
+  
+  &::before {
+    content: "";
+    width: 395px;
+    height: 395px;
+    transform: rotate(-130deg);
+    border-radius: 395px;
+    background: rgba(79, 71, 200, 0.40);
+    filter: blur(300px);
+    
+    position: absolute;
+    left: 80px;
+    z-index: -1;
+  }
+  
+  &::after {
+    content: "";
+    width: 472px;
+    height: 472px;
+    transform: rotate(-130deg);
+    border-radius: 472px;
+    background: rgba(29, 213, 208, 0.22);
+    filter: blur(300px);
+    
+    position: absolute;
+    right: 40px;
+    top: -150px;
+  }
 `
 
 const Photo = styled.img`
