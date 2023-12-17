@@ -50,8 +50,8 @@ export const Skills = () => {
   return (
     <StyledSkills>
       <Container>
-        <SectionTitle active>Skills</SectionTitle>
-        <FlexWrapper justify={ "space-between" } align={"center"} wrap={"wrap"}>
+        <SectionTitle>Skills</SectionTitle>
+        <FlexWrapper justify={ "space-between" } align={ "center" } wrap={ "wrap" }>
           <SkillsWrapper>
             <Text>I have a vast experience in the following web technologies:</Text>
             <FlexWrapper wrap={ "wrap" } gap={ "44px" }>

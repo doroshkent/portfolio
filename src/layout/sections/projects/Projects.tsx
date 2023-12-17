@@ -8,12 +8,13 @@ import timerImg from "assets/img/proj-2.webp";
 import dashBoardImg from "assets/img/proj-3.webp"
 import { Container } from "components/Container";
 import { theme } from 'styles/Theme';
+import { Icon } from "components/icon/Icon";
 
 export const Projects = () => {
   return (
     <StyledProjects>
       <Container>
-        <ProjectsTitle active isWhite>Projects</ProjectsTitle>
+        <SectionTitle isActive isWhite marginBottom="8px"><Icon iconId={"gears"} width="25" height="23" viewBox="0 0 25 23"/>Projects</SectionTitle>
         <Text>A select number of projects</Text>
         <FlexWrapper justify={"space-between"} wrap={"wrap"} gap={"2vw"}>
           <Project src={ socialImg }
@@ -31,10 +32,6 @@ export const Projects = () => {
 const StyledProjects = styled.section`
   padding: 30px 0 40px;
   color: ${ theme.colors.tertiaryFont };
-`
-
-const ProjectsTitle = styled(SectionTitle)`
-  margin-bottom: 8px;
 `
 
 const Text = styled.p`

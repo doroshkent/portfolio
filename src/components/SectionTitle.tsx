@@ -1,26 +1,33 @@
 import styled from "styled-components";
 import { theme } from "styles/Theme";
-import gearsImg from "assets/img/gears.svg"
+import React from "react";
+import { Icon } from "components/icon/Icon";
 
 type SectionTitlePropsType = {
-  active?: boolean
+  isActive?: boolean
   isWhite?: boolean
+  marginBottom?: string
+  children?: React.ReactNode
 }
 
-export const SectionTitle = styled.h2<SectionTitlePropsType>`
+export const SectionTitle = (props: SectionTitlePropsType) => {
+  return <StyledSectionTitle isWhite={props.isWhite} isActive={props.isActive} marginBottom={props.marginBottom}>
+    <Icon iconId={"gears"} width="25" height="23" viewBox="0 0 25 23"/>
+    <span>{props.children}</span>
+  </StyledSectionTitle>
+}
+
+const StyledSectionTitle = styled.h2<SectionTitlePropsType>`
   text-align: center;
   font-size: 20px;
   font-weight: 500;
   color: ${props => props.isWhite ? theme.colors.tertiaryFont : theme.colors.accent};
-  margin-bottom: 30px;
+  margin-bottom: ${props => props.marginBottom || "30px"} ;
   
   position: relative;
-  
-  &::before {
-    content: ${(props) => props.active && `url(${gearsImg})`};
-    color: ${props => props.isWhite ? theme.colors.tertiaryFont : theme.colors.accent};
-    
+
+  svg {
     position: absolute;
-    transform: translateX(-44px);
+    transform: translateX(-42px) ${props => props.isActive ? "scale(1)" : "scale(0)"};
   }
 `
