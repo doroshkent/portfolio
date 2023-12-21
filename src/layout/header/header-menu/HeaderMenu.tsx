@@ -22,7 +22,11 @@ export const HeaderMenu = (props: {menuItems: Array<string>}) => {
 const StyledHeaderMenu = styled.nav`
   ul {
     display: flex;
-    gap: 50px;
+    gap: 82px;
+  }
+  
+  @media ${theme.media.mobile} {
+    display: none;
   }
 `
 

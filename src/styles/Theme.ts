@@ -9,5 +9,10 @@ export const theme = {
     tertiaryFont: "rgba(255, 255, 255, 0.87)",
 
     placeholder: "#838383",
+  },
+
+  media: {
+    tablet: "screen and (max-width: 768px)",
+    mobile: "screen and (max-width: 576px)",
   }
 }
