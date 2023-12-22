@@ -34,6 +34,10 @@ export const GlobalStyle = createGlobalStyle`
     background-color: unset;
   }
   
+  section {
+    padding: 70px 0;
+  }
+  
   section:first-of-type,
   section:nth-of-type(even) {
     background-color: ${theme.colors.primary};

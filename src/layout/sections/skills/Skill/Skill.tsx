@@ -1,30 +1,31 @@
 import React from 'react';
 import { Icon } from "components/icon/Icon";
 import styled from "styled-components";
-import polygon from "assets/img/Polygon.svg"
-import { FlexWrapper } from "components/FlexWrapper";
+import polygon from "assets/img/Polygon.svg";
+import { theme } from "styles/Theme";
+import { font } from "styles/Common";
 
 type SkillPropsType = {
   iconId: string
   title: string
+  viewBox: string
 }
 
 export const Skill = (props: SkillPropsType) => {
-  const viewBox = props.iconId === "git" ? "0 0 92 92" : "0 0 120 120"
   return (
     <StyledSkill>
-      <FlexWrapper direction={"column"} align={"center"} justify={"center"}>
         <IconWrapper>
-          <Icon iconId={props.iconId} width={"42"} height={"42"} viewBox={viewBox}/>
+          <Icon iconId={props.iconId} width={"42"} height={"42"} viewBox={props.viewBox}/>
         </IconWrapper>
         <SkillTitle>{props.title}</SkillTitle>
-      </FlexWrapper>
     </StyledSkill>
   );
 };
 
 const StyledSkill = styled.div`
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 
 const IconWrapper = styled.div`
@@ -34,16 +35,24 @@ const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  background-image: url(${polygon});
+  background-repeat: no-repeat;
+  background-size: 85%;
+  background-position: center;
   
-  &::before {
-    content: url(${polygon});
-    position: absolute;
+  @media ${theme.media.mobile} {
+    width: 118px;
+    height: 118px;
+  }
+  
+  svg {
+    @media ${theme.media.mobile} {
+      transform: scale(1.6);
+    }
   }
 `
 
 const SkillTitle = styled.h3`
   text-align: center;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 1.8;
+  ${font({height: 1.8, Fmax: 16, Fmin: 18})}
 `

@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { theme } from "styles/Theme";
 
 type FlexWrapperPropsType = {
   direction?: "row" | "row-reverse" | "column" | "column-reverse"
