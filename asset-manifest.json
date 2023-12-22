@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.31d6cfe0.css",
-    "main.js": "/portfolio/static/js/main.360e1669.js",
+    "main.js": "/portfolio/static/js/main.ee01763c.js",
     "static/js/787.2585d02b.chunk.js": "/portfolio/static/js/787.2585d02b.chunk.js",
     "static/media/photo@3x.webp": "/portfolio/static/media/photo@3x.ae0b486ae0904f9e662e.webp",
     "static/media/logo.png": "/portfolio/static/media/logo.566f62437b2dba3fc321.png",
     "static/media/photo@2x.webp": "/portfolio/static/media/photo@2x.55602df73ecccc8da8dd.webp",
     "static/media/photo.webp": "/portfolio/static/media/photo.718f3c666d45bdfb6d8e.webp",
-    "static/media/icons-sprite.svg": "/portfolio/static/media/icons-sprite.7c14499dd42378b1d855dd081f169d37.svg",
+    "static/media/icons-sprite.svg": "/portfolio/static/media/icons-sprite.a490b4a787ae74457bd54f217c8a5f86.svg",
     "static/media/proj-1.webp": "/portfolio/static/media/proj-1.f4264469c0e20ce5f20d.webp",
     "static/media/proj-2.webp": "/portfolio/static/media/proj-2.e294a9180f3031d1b313.webp",
     "static/media/paperPlane.svg": "/portfolio/static/media/paperPlane.83d467af105d371c422910a90c79037e.svg",
@@ -20,11 +20,11 @@
     "index.html": "/portfolio/index.html",
     "static/media/Polygon.svg": "/portfolio/static/media/Polygon.b241646da82b3db993aab32f427a15e8.svg",
     "static/media/footer.svg": "/portfolio/static/media/footer.4d1d037312faa0c130767d760855967f.svg",
-    "main.360e1669.js.map": "/portfolio/static/js/main.360e1669.js.map",
+    "main.ee01763c.js.map": "/portfolio/static/js/main.ee01763c.js.map",
     "787.2585d02b.chunk.js.map": "/portfolio/static/js/787.2585d02b.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.360e1669.js"
+    "static/js/main.ee01763c.js"
   ]
 }
