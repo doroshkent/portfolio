@@ -3,6 +3,9 @@ import React from 'react';
 import styled from "styled-components";
 import { FlexWrapper } from "components/FlexWrapper";
 import arrowIcon from "assets/img/Arrow.svg"
+import { font } from "styles/Common";
+import { FaLaptopCode } from "react-icons/fa";
+import { theme } from "styles/Theme";
 
 type WorkPropsType = {
   src: string
@@ -12,10 +15,13 @@ type WorkPropsType = {
 export const Project = (props: WorkPropsType) => {
   return (
     <StyledProject>
-      <FlexWrapper direction={ "column" } justify={ "space-between" } align={ "center" } gap={"20px"}>
+      <FlexWrapper direction={ "column" } justify={"space-between"} align={ "center" } gap={"20px"}>
         <Image src={ props.src } alt={ "project screenshot" }/>
         <Text>{ props.description }</Text>
-        <ProjectButton as={ "a" } href={ "#" }>learn more</ProjectButton>
+        <FlexWrapper justify={"center"} gap={"30px"} height={"auto"}>
+          <ProjectButton as={ "a" } href={ "#" }>demo</ProjectButton>
+          <ProjectButton as={ "a" } href={ "#" }>code</ProjectButton>
+        </FlexWrapper>
       </FlexWrapper>
     </StyledProject>
   );
@@ -23,8 +29,8 @@ export const Project = (props: WorkPropsType) => {
 
 const StyledProject = styled.div`
   background-color: #262C4D; 
-  max-width: 380px;
-  width: 100%;
+  width: 300px;
+  flex-grow: 1;
   
   border: 4px solid;
   border-image: repeating-linear-gradient( 290deg, #0D54BE, #20ECD3) 1;
@@ -32,8 +38,9 @@ const StyledProject = styled.div`
 
 const Text = styled.p`
   text-align: center;
-  font-size: 16px;
   padding: 0 10px;
+  
+  ${font({color: "inherit", height: 1.8, Fmax: 16, Fmin: 14})}
 `
 
 const Image = styled.img`
@@ -43,11 +50,11 @@ const Image = styled.img`
 `
 
 const ProjectButton = styled(Button)`
-  padding: 8px 16px 14px;
-  margin-bottom: 12px;
+  padding: 10px 16px;
+  margin-bottom: 20px;
   border: 2px solid #FFF;
   background: rgba(52, 61, 104, 0.08);
-  text-transform: capitalize;
+  text-transform: uppercase;
 
   &::after {
     content: url(${arrowIcon});

@@ -35,7 +35,7 @@ export const GlobalStyle = createGlobalStyle`
   }
   
   section {
-    padding: 70px 0;
+    padding: 80px 0;
   }
   
   section:first-of-type,

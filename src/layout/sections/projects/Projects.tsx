@@ -9,20 +9,21 @@ import dashBoardImg from "assets/img/proj-3.webp"
 import { Container } from "components/Container";
 import { theme } from 'styles/Theme';
 import { Icon } from "components/icon/Icon";
+import { font } from "styles/Common";
 
 export const Projects = () => {
   return (
     <StyledProjects>
       <Container>
-        <SectionTitle isActive isWhite marginBottom="8px"><Icon iconId={"gears"} width="25" height="23" viewBox="0 0 25 23"/>Projects</SectionTitle>
+        <SectionTitle isActive isWhite marginBottom="8px">Projects</SectionTitle>
         <Text>A select number of projects</Text>
-        <FlexWrapper justify={"space-between"} wrap={"wrap"} gap={"2vw"}>
+        <FlexWrapper justify={"space-between"} wrap={"wrap"} gap={"50px"}>
           <Project src={ socialImg }
-                   description={ "Made a social media manager template using HTML 5, CSS and JS. " }/>
+                   description={ "Made a social media manager template using HTML5, CSS and JS. " }/>
           <Project src={ timerImg }
-                   description={ "Made a simple card page using HTML 5 and  CSS 3" }/>
-          <Project src={ dashBoardImg }
-                   description={ "Made an I.P address tracking website." }/>
+                   description={ "Made a simple card page using HTML5 and  CSS3" }/>
+          {/*<Project src={ dashBoardImg }*/}
+          {/*         description={ "Made an I.P address tracking website." }/>*/}
         </FlexWrapper>
       </Container>
     </StyledProjects>
@@ -30,11 +31,18 @@ export const Projects = () => {
 };
 
 const StyledProjects = styled.section`
-  padding: 30px 0 40px;
   color: ${ theme.colors.tertiaryFont };
+  
+   ${Container} > ${FlexWrapper} {
+     @media ${theme.media.mobile} {
+       gap: 40px;
+     }
+   }
 `
 
 const Text = styled.p`
   text-align: center;
-  margin-bottom: 24px;
+  margin-bottom: 60px;
+  
+  ${font({color: "inherit", Fmax: 18, Fmin: 16})}
 `
