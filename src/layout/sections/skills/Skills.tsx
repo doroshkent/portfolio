@@ -114,11 +114,7 @@ const SkillsWrapper = styled.div`
 
 const Text = styled.p`
   color: #818080;
-  margin-bottom: 40px;
-
-  @media ${ theme.media.mobile } {
-    margin-bottom: 50px;
-  }
+  margin-bottom: 50px;
 `
 
 const Image = styled.img`

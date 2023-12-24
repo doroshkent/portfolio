@@ -36,6 +36,6 @@ const StyledSectionTitle = styled.h2<SectionTitlePropsType>`
   }
   
   @media ${theme.media.mobile} {
-    margin-bottom: 30px;
+    margin-bottom: ${ props => props.marginBottom || "50px" };
   }
 `

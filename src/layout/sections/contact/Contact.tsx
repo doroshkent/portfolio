@@ -6,19 +6,20 @@ import { FlexWrapper } from "components/FlexWrapper";
 import contactImg from "assets/img/contacts.svg"
 import { Container } from "components/Container";
 import { theme } from "styles/Theme";
-import paperPlane from "assets/img/paperPlane.svg"
+import { IoSend } from "react-icons/io5";
 
 export const Contact = () => {
   return (
     <StyledContact>
       <Container>
-        <SectionTitle>Contact me</SectionTitle>
-        <FlexWrapper justify={ "space-around" }>
-          <img src={ contactImg } alt="" aria-hidden/>
+        <SectionTitle isActive>Contact me</SectionTitle>
+        <FlexWrapper justify={ "space-around" } wrap={ "wrap" } gap={ "36px" }>
+          <Image src={ contactImg } alt="" aria-hidden/>
           <StyledForm>
             <Field type={ "email" } placeholder={ "Enter email address" }/>
             <Field placeholder={ "Enter message..." } as={ "textarea" }/>
-            <SubmitButton type={ "submit" }>Send Message</SubmitButton>
+            <SubmitButton type={ "submit" }>Send Message <IoSend
+              style={ { color: "#81d6f4", transform: "translate(4px, 3px)"} }/> </SubmitButton>
           </StyledForm>
         </FlexWrapper>
       </Container>
@@ -27,7 +28,6 @@ export const Contact = () => {
 };
 
 const StyledContact = styled.section`
-  padding: 74px 0;
 `
 
 const StyledForm = styled.form`
@@ -39,7 +39,7 @@ const StyledForm = styled.form`
   align-items: center;
   gap: 43px;
   margin: 0 auto;
-  
+
   textarea {
     resize: none;
     height: 158px;
@@ -51,25 +51,30 @@ const Field = styled.input`
   width: 100%;
   border-radius: 4px;
   border: 1px solid rgba(0, 0, 0, 0.25);
-  background-color: ${theme.colors.secondaryFont};
+  background-color: ${ theme.colors.secondaryFont };
   font-family: "Be Vietnam pro", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 2;
-  
+
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.20), 0 2px 1px 0 rgba(0, 0, 0, 0.12), 0 1px 1px 0 rgba(0, 0, 0, 0.14);
-  
+
   &::placeholder {
-    color: ${theme.colors.placeholder};
+    color: ${ theme.colors.placeholder };
   }
 `
 
 const SubmitButton = styled(Button)`
   background-color: #343D68;
   padding: 12px 24px;
-  
-  &::after {
-    content: url(${paperPlane});
-    margin-left: 20px;
+  position: relative;
+`
+
+const Image = styled.img`
+  max-width: 562px;
+  width: 100%;
+
+  @media ${ theme.media.mobile } {
+    max-width: 250px;
   }
 `
