@@ -9,13 +9,15 @@ type SkillPropsType = {
   iconId: string
   title: string
   viewBox: string
+  width?: string
+  height?: string
 }
 
 export const Skill = (props: SkillPropsType) => {
   return (
     <StyledSkill>
         <IconWrapper>
-          <Icon iconId={props.iconId} width={"42"} height={"42"} viewBox={props.viewBox}/>
+          <Icon iconId={props.iconId} width={props.width} height={props.height} viewBox={props.viewBox}/>
         </IconWrapper>
         <SkillTitle>{props.title}</SkillTitle>
     </StyledSkill>
@@ -54,5 +56,6 @@ const IconWrapper = styled.div`
 
 const SkillTitle = styled.h3`
   text-align: center;
-  ${font({height: 1.8, Fmax: 16, Fmin: 18})}
+  ${font({height: 1.8, Fmax: 16, Fmin: 18})};
+  text-transform: capitalize;
 `
