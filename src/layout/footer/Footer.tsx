@@ -3,28 +3,27 @@ import styled from "styled-components";
 import { Icon } from "components/icon/Icon";
 import { FlexWrapper } from "components/FlexWrapper";
 import { theme } from "styles/Theme";
-import { FaTelegramPlane } from "react-icons/fa";
+import { FaLinkedinIn, FaTelegramPlane } from "react-icons/fa";
+import { SiGmail } from "react-icons/si";
 import { Container } from "components/Container";
-import footerImg from "assets/img/footer.svg"
+import footerImg from "assets/img/footer.svg";
+import { font } from "styles/Common";
 
-
-const iconsItems = [ "gmail", "linkedin" ]
 
 export const Footer = () => {
   return (
     <StyledFooter>
       <Container>
-        <FlexWrapper justify="space-between" align={ "center" } height={ "424px" }>
+        <FlexWrapper justify="space-around" align={ "center" } wrap={ "wrap" } gap={ "35px" }>
           <div>
             <Text>My social media links:</Text>
             <SocialList>
-              { iconsItems.map((item, index) => {
-                return <SocialItem key={ index }>
-                  <SocialLink>
-                    <Icon iconId={ item } height={ "30" } width={ "30" } viewBox={ "0 0 30 30" }/>
-                  </SocialLink>
-                </SocialItem>
-              }) }
+              <SocialItem>
+                <SocialLink><FaLinkedinIn style={ { color: "white", width: "30px", height: "30px" } }/> </SocialLink>
+              </SocialItem>
+              <SocialItem>
+                <SocialLink><SiGmail style={ { color: "white", width: "30px", height: "30px" } }/> </SocialLink>
+              </SocialItem>
               <SocialItem>
                 <SocialLink><FaTelegramPlane style={ { color: "white", width: "30px", height: "30px" } }/> </SocialLink>
               </SocialItem>
@@ -34,7 +33,7 @@ export const Footer = () => {
             <Text>More projects I've worked on</Text>
             <SocialLink href={ "#" }>
               <Icon iconId={ "github" } height={ "30" } width={ "30" }
-                    viewBox={ "0 0 30 30" }/>
+                    viewBox={ "0 0 31 31" }/>
               <span>@doroshkent</span>&nbsp;on github
             </SocialLink>
           </div>
@@ -45,28 +44,27 @@ export const Footer = () => {
 };
 
 const StyledFooter = styled.footer`
-  background-image: url(${ footerImg });
-  background-repeat: no-repeat;
-  background-color: ${ theme.colors.primary };
-
+  padding: 98px 0 175px;
+  background-color: ${ theme.colors.secondary };
   position: relative;
-
-  & > div {
-    padding: 0 110px;
-
-    position: relative;
-    z-index: 3;
-  }
+  z-index: 1;
+  outline: 1px solid red;
 
   &:after {
     display: block;
     content: ' ';
-    inset: 0;
-    background-color: ${ theme.colors.secondary };
-    height: 212px;
     width: 100%;
+    height: 100%;
+    background-image: url(${ footerImg });
+    background-size: 100% auto;
+    background-repeat: no-repeat;
     position: absolute;
-    top: 50%;
+    top: -100px;
+    z-index: -1;
+  }
+  
+  @media ${theme.media.mobile} {
+    padding: 10px 0 36px;
   }
 `
 
@@ -94,8 +92,11 @@ const SocialLink = styled.a`
 `
 
 const Text = styled.p`
-  color: ${ theme.colors.secondaryFont };
-  font-size: 20px;
-  font-weight: 500;
   margin-bottom: 34px;
+  ${ font({ weight: 500, color: theme.colors.secondaryFont, Fmax: 20, Fmin: 18 }) };
+
+  @media ${ theme.media.mobile } {
+    font-weight: 400;
+    margin-bottom: 12px;
+  }
 `
