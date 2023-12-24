@@ -28,6 +28,7 @@ export const Contact = () => {
 };
 
 const StyledContact = styled.section`
+  padding-bottom: 150px;
 `
 
 const StyledForm = styled.form`
