@@ -40,7 +40,7 @@ const Text = styled.p`
   text-align: center;
   padding: 0 10px;
   
-  ${font({color: "inherit", height: 1.8, Fmax: 16, Fmin: 14})}
+  ${font({color: "inherit", Fmax: 16, Fmin: 14})}
 `
 
 const Image = styled.img`

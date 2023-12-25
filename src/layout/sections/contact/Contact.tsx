@@ -12,7 +12,7 @@ export const Contact = () => {
   return (
     <StyledContact>
       <Container>
-        <SectionTitle isActive>Contact me</SectionTitle>
+        <SectionTitle>Contact me</SectionTitle>
         <FlexWrapper justify={ "space-around" } wrap={ "wrap" } gap={ "36px" }>
           <Image src={ contactImg } alt="" aria-hidden/>
           <StyledForm>

@@ -6,6 +6,7 @@ import { Skill } from "layout/sections/skills/Skill/Skill";
 import skillsImg from "assets/img/skills.svg"
 import { Container } from "components/Container";
 import { theme } from "styles/Theme";
+import { font } from "styles/Common";
 
 const skills = [
   {
@@ -75,7 +76,7 @@ export const Skills = () => {
   return (
     <StyledSkills>
       <Container>
-        <SectionTitle isActive>Skills</SectionTitle>
+        <SectionTitle>Skills</SectionTitle>
         <FlexWrapper justify={ "space-between" } align={ "center" } wrap={ "wrap-reverse" }>
           <SkillsContentWrapper>
             <Text>I have a vast experience in the following web technologies:</Text>
@@ -109,7 +110,6 @@ const SkillsContentWrapper = styled.div`
 
   @media ${ theme.media.mobile } {
     text-align: left;
-    margin: 0 20px;
   }
 `
 
@@ -129,8 +129,8 @@ const SkillsWrapper = styled.div`
 `
 
 const Text = styled.p`
-  color: #818080;
   margin-bottom: 50px;
+  ${font({Fmax: 18, Fmin: 16, color: "#818080"})}
 `
 
 const Image = styled.img`

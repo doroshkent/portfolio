@@ -13,8 +13,8 @@ export const Projects = () => {
   return (
     <StyledProjects>
       <Container>
-        <SectionTitle isActive isWhite marginBottom="8px">Projects</SectionTitle>
-        <Text>A select number of projects</Text>
+        <SectionTitle isWhite>Projects</SectionTitle>
+        <Text>Some of my projects include:</Text>
         <FlexWrapper justify={"space-between"} wrap={"wrap"} gap={"50px"}>
           <Project src={ socialImg }
                    description={ "Made a social media manager template using HTML5, CSS and JS. " }/>
@@ -41,4 +41,9 @@ const Text = styled.p`
   margin-bottom: 60px;
   
   ${font({color: "inherit", Fmax: 18, Fmin: 16})}
+
+  @media ${theme.media.mobile} {
+    text-align: left;
+    margin-bottom: 30px;
+  }
 `
