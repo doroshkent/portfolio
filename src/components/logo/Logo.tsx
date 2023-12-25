@@ -3,10 +3,10 @@ import logo from "assets/img/logo.png";
 import styled from "styled-components";
 import { theme } from "styles/Theme";
 
-export const Logo = () => {
+export const Logo: React.FC = () => {
   return (
     <LogoLink href="#">
-      <LogoIcon src={logo} alt="logo"/>
+      <LogoIcon src={ logo } alt="logo"/>
     </LogoLink>
   );
 };
@@ -16,7 +16,7 @@ const LogoIcon = styled.img`
 `
 
 const LogoLink = styled.a`
-  @media ${theme.media.mobile} {
+  @media ${ theme.media.mobile } {
     display: none;
   }
 `

@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { theme } from "styles/Theme";
-import React from "react";
 import { font } from "styles/Common";
 
 type SectionTitlePropsType = {
@@ -17,8 +16,8 @@ export const SectionTitle = styled.h2<SectionTitlePropsType>`
     Fmin: 25,
     color: props.isWhite ? theme.colors.tertiaryFont : theme.colors.accent
   }) };
-  
-  @media ${theme.media.mobile} {
+
+  @media ${ theme.media.mobile } {
     margin-bottom: ${ props => props.marginBottom || "50px" };
     font-weight: 600;
   }
