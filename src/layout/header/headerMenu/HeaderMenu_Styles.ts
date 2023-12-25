@@ -1,38 +1,52 @@
-import React, { useState } from 'react';
 import styled, { css, keyframes } from "styled-components";
 import { theme } from "styles/Theme";
-import { Icon } from "components/icon/Icon";
 
+// Menu
 
-export const MobileHeaderMenu = (props: { menuItems: Array<string> }) => {
-  const [ isOpen, setIsOpen ] = useState(false);
+const MenuItem = styled.li`
+  position: relative;
+  overflow: hidden;
 
-  const onBurgerButtonTouchHandler = () => {
-    setIsOpen(!isOpen);
+  svg {
+    color: ${ theme.colors.accent };
+    margin-right: 8px;
+
+    position: absolute;
+    left: -100%;
   }
 
-  return (
-    <StyledMobileMenu isOpen={ isOpen }>
-      <BurgerButton onTouchStart={ onBurgerButtonTouchHandler } isOpen={ isOpen }>
-        <span></span>
-      </BurgerButton>
+  &:hover {
+    overflow: visible;
 
-      <MobileMenuPopup isOpen={ isOpen }>
-        <ul role="menu">
-          { props.menuItems.map((item, index) => {
-            return <ListItem key={ index } role="menuitem">
-              <Icon iconId={ "gears" } width="25" height="23" viewBox="0 0 25 23"/>
-              <Link href="">{ item }</Link>
-            </ListItem>
-          }) }
-        </ul>
-      </MobileMenuPopup>
-    </StyledMobileMenu>
-  );
-};
+    svg {
+      left: -32px;
+    }
+  }
+`
 
-const StyledMobileMenu = styled.nav<{ isOpen: boolean }>`
-  display: none;
+const Link = styled.a`
+  color: ${ theme.colors.primaryFont };
+  font-family: "Be Vietnam", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+
+  &:hover {
+    color: ${ theme.colors.accent }
+  }
+`
+
+// Desktop Menu
+
+const DesktopMenu = styled.nav`
+  ul {
+    display: flex;
+    gap: 82px;
+  }
+`
+
+// Mobile Menu
+
+const MobileMenu = styled.nav<{ isOpen: boolean }>`
   width: 100%;
   position: relative;
 
@@ -43,10 +57,6 @@ const StyledMobileMenu = styled.nav<{ isOpen: boolean }>`
     justify-content: center;
     gap: 20px;
     width: 100%;
-  }
-
-  @media ${ theme.media.mobile } {
-    display: block;
   }
 `
 
@@ -115,38 +125,15 @@ const slideIn = keyframes`
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   transform-origin: top;
-  animation: ${slideIn} 0.5s ease-in-out; 
-  display: ${props => (props.isOpen ? 'block' : 'none')};
+  animation: ${ slideIn } 0.5s ease-in-out;
+  display: ${ props => (props.isOpen ? 'block' : 'none') };
 `
 
-const ListItem = styled.li`
-  position: relative;
-  overflow: hidden;
-
-  svg {
-    color: ${ theme.colors.accent };
-    margin-right: 8px;
-
-    position: absolute;
-    left: -100%;
-  }
-
-  &:hover {
-    overflow: visible;
-
-    svg {
-      left: -32px;
-    }
-  }
-`
-
-const Link = styled.a`
-  color: ${ theme.colors.primaryFont };
-  font-family: "Be Vietnam", sans-serif;
-  font-size: 18px;
-  font-weight: 400;
-
-  &:hover {
-    color: ${ theme.colors.accent }
-  }
-`
+export const S = {
+  MenuItem,
+  Link,
+  DesktopMenu,
+  MobileMenu,
+  BurgerButton,
+  MobileMenuPopup,
+}
