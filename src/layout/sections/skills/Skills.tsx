@@ -124,7 +124,7 @@ const SkillsWrapper = styled.div`
   }
 
   @media ${ theme.media.mobile } {
-    grid-gap: 30px 60px;
+    grid-gap: 30px 70px;
   }
 `
 

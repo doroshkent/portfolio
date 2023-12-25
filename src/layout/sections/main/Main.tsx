@@ -34,7 +34,7 @@ export const Main = () => {
 };
 
 const StyledMain = styled.section`
-  padding: 200px 0 100px;
+  padding: 220px 0 100px;
   display: flex;
   overflow-x: hidden;
 
@@ -76,8 +76,7 @@ const StyledMain = styled.section`
 
 const PhotoWrapper = styled.div`
   position: relative;
-  margin-right: 10px;
-  margin-bottom: 70px;
+  margin-right: 32px;
 
   @media screen and (max-width: 937px) {
     margin: 0 auto 70px;

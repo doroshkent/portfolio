@@ -39,11 +39,15 @@ const StyledForm = styled.form`
   justify-content: center;
   align-items: center;
   gap: 43px;
-  margin: 0 auto;
+  margin-left: 28px;
 
   textarea {
     resize: none;
     height: 158px;
+  }
+  
+  @media ${theme.media.tablet} {
+    margin: 0 auto;
   }
 `
 

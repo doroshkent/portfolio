@@ -63,7 +63,13 @@ const StyledFooter = styled.footer`
     z-index: -1;
   }
   
-  @media ${theme.media.mobile} {
+  ${FlexWrapper} {
+    @media ${ theme.media.mobile } {
+      justify-content: left;
+    }
+  }
+
+  @media ${ theme.media.mobile } {
     padding: 10px 0 36px;
   }
 `
