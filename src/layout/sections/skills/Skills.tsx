@@ -1,15 +1,15 @@
 import React from 'react';
+import { v4 } from "uuid";
 import { FlexWrapper } from "components/FlexWrapper";
-import styled from "styled-components";
 import { SectionTitle } from "components/SectionTitle";
 import { Skill } from "layout/sections/skills/Skill/Skill";
 import skillsImg from "assets/img/skills.svg"
 import { Container } from "components/Container";
-import { theme } from "styles/Theme";
-import { font } from "styles/Common";
+import { S } from "./Skills_Styles"
 
-const skills = [
+const skillsData = [
   {
+    id: v4(),
     iconId: "javascript",
     title: "JavaScript",
     viewBox: "0 0 116 120",
@@ -17,6 +17,7 @@ const skills = [
     height: "38",
   },
   {
+    id: v4(),
     iconId: "typescript",
     title: "TypeScript",
     viewBox: "0 0 120 120",
@@ -24,6 +25,7 @@ const skills = [
     height: "38",
   },
   {
+    id: v4(),
     iconId: "react",
     title: "React",
     viewBox: "0 0 120 120",
@@ -31,6 +33,7 @@ const skills = [
     height: "46",
   },
   {
+    id: v4(),
     iconId: "redux",
     title: "Redux",
     viewBox: "0 0 120 120",
@@ -38,6 +41,7 @@ const skills = [
     height: "42",
   },
   {
+    id: v4(),
     iconId: "html",
     title: "HTML",
     viewBox: "0 0 120 120",
@@ -45,6 +49,7 @@ const skills = [
     height: "44",
   },
   {
+    id: v4(),
     iconId: "css",
     title: "CSS",
     viewBox: "0 0 120 119",
@@ -52,11 +57,13 @@ const skills = [
     height: "44",
   },
   {
+    id: v4(),
     iconId: "jest",
     title: "Jest",
     viewBox: "0 0 120 120",
   },
   {
+    id: v4(),
     iconId: "git",
     title: "Git",
     viewBox: "0 0 92 92",
@@ -64,6 +71,7 @@ const skills = [
     height: "44",
   },
   {
+    id: v4(),
     iconId: "styledComponents",
     title: "Styled components",
     viewBox: "0 0 120 120",
@@ -72,74 +80,24 @@ const skills = [
   },
 ]
 
-export const Skills = () => {
+export const Skills: React.FC = () => {
   return (
-    <StyledSkills>
+    <S.Skills>
       <Container>
         <SectionTitle>Skills</SectionTitle>
-        <FlexWrapper justify={ "space-between" } align={ "center" } wrap={ "wrap-reverse" }>
-          <SkillsContentWrapper>
-            <Text>I have a vast experience in the following web technologies:</Text>
-            <SkillsWrapper>
-              { skills.map(skill => {
-                return <Skill key={ skill.iconId } iconId={ skill.iconId } title={ skill.title }
-                              viewBox={ skill.viewBox } width={ skill.width || "40"} height={ skill.height || "40"}/>
+        <FlexWrapper justify="space-between" align="center" wrap="wrap-reverse">
+          <S.SkillsContentWrapper>
+            <S.Text>I have a vast experience in the following web technologies:</S.Text>
+            <S.SkillsWrapper>
+              { skillsData.map(s => {
+                return <Skill key={ s.id } iconId={ s.iconId } title={ s.title }
+                              viewBox={ s.viewBox } width={ s.width || "40" } height={ s.height || "40" }/>
               }) }
-            </SkillsWrapper>
-          </SkillsContentWrapper>
-          <Image src={ skillsImg } alt="" aria-hidden/>
+            </S.SkillsWrapper>
+          </S.SkillsContentWrapper>
+          <S.Image src={ skillsImg } alt="" aria-hidden/>
         </FlexWrapper>
       </Container>
-    </StyledSkills>
+    </S.Skills>
   );
 };
-
-const StyledSkills = styled.section`
-  @media ${ theme.media.mobile } {
-    padding-bottom: 92px;
-  }
-`
-
-const SkillsContentWrapper = styled.div`
-  margin-right: 40px;
-  flex-grow: 1;
-
-  @media screen and (max-width: 1003px) {
-    text-align: center;
-  }
-
-  @media ${ theme.media.mobile } {
-    text-align: left;
-  }
-`
-
-const SkillsWrapper = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(75px, 100px));
-  grid-auto-rows: auto;
-  gap: 20px;
-
-  @media screen and (max-width: 1003px) {
-    justify-content: center;
-  }
-
-  @media ${ theme.media.mobile } {
-    grid-gap: 30px 70px;
-  }
-`
-
-const Text = styled.p`
-  margin-bottom: 50px;
-  ${font({Fmax: 18, Fmin: 16, color: "#818080"})}
-`
-
-const Image = styled.img`
-  @media screen and (max-width: 1094px) {
-    margin: 0 auto 43px;
-    max-width: 420px;
-  }
-  
-  @media ${ theme.media.mobile } {
-    max-width: 250px;
-  }
-`
