@@ -6,6 +6,7 @@ import { FlexWrapper } from 'components/FlexWrapper';
 import { Container } from "components/Container";
 import { S } from "layout/sections/main/Main_Styles";
 import Typewriter from 'typewriter-effect';
+import Tilt from 'react-parallax-tilt';
 
 export const Main: React.FC = () => {
   return (
@@ -35,8 +36,15 @@ export const Main: React.FC = () => {
             <S.HireMeButton>Hire me</S.HireMeButton>
           </S.DescriptionWrapper>
           <S.PhotoWrapper>
-            <S.Photo src={ photo } alt="Anastasiya Darashkevich photo"
-                     srcSet={ `${ mediumPhoto } 2x, ${ largePhoto } 3x` }/>
+            <Tilt tiltMaxAngleX={40}
+                  tiltMaxAngleY={40}
+                  perspective={800}
+                  transitionSpeed={1500}
+                  scale={1.1}
+                  gyroscope={true}>
+              <S.Photo src={ photo } alt="Anastasiya Darashkevich photo"
+                       srcSet={ `${ mediumPhoto } 2x, ${ largePhoto } 3x` }/>
+            </Tilt>
           </S.PhotoWrapper>
         </FlexWrapper>
       </Container>
