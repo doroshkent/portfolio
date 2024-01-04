@@ -14,14 +14,21 @@ const Footer = styled.footer`
   &:after {
     display: block;
     content: ' ';
-    width: 100%;
-    height: 100%;
+    height: 150px;
     background-image: url(${ footerImg });
-    background-size: 100% auto;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-position-x: center;
     position: absolute;
-    top: -100px;
+    left: 0;
+    right: 0;
+    top: -120px;
     z-index: -1;
+
+    @media ${ theme.media.mobile } {
+      background-size: contain;
+      top: -30px;
+    }
   }
 
   ${ FlexWrapper } {

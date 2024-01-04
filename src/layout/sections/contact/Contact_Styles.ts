@@ -3,7 +3,11 @@ import { theme } from "styles/Theme";
 import { Button } from "components/button/Button";
 
 const Contact = styled.section`
-  padding-bottom: 150px;
+  padding-bottom: 180px;
+
+  @media ${theme.media.mobile} {
+    padding-bottom: 84px;
+  }
 `
 
 const Form = styled.form`
