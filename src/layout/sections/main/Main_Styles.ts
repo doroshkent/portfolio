@@ -23,7 +23,7 @@ const Main = styled.section`
     height: 395px;
     transform: rotate(-130deg);
     border-radius: 395px;
-    background: rgba(79, 71, 200, 0.40);
+    background: #e9e8f6;
     filter: blur(300px);
 
     position: absolute;
