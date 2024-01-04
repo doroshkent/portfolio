@@ -17,7 +17,7 @@ const Form = styled.form`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 43px;
+  gap: 38px;
   margin-left: 28px;
 
   textarea {
