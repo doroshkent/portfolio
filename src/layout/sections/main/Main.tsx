@@ -10,7 +10,7 @@ import Tilt from 'react-parallax-tilt';
 
 export const Main: React.FC = () => {
   return (
-    <S.Main>
+    <S.Main id="home">
       <Container>
         <FlexWrapper align="center" justify="space-between" wrap="wrap-reverse">
           <S.DescriptionWrapper>
@@ -20,7 +20,10 @@ export const Main: React.FC = () => {
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter.pauseFor(1500)
-                    .typeString('web')
+                    .typeString('web develo')
+                    .pauseFor(1500)
+                    .deleteAll()
+                    .typeString('react developer')
                     .pauseFor(1500)
                     .deleteAll()
                     .typeString('front-end developer')

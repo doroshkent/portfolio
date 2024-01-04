@@ -23,7 +23,7 @@ const projectsData = [
 
 export const Projects: React.FC = () => {
   return (
-    <S.Projects>
+    <S.Projects id="projects">
       <Container>
         <SectionTitle isWhite>Projects</SectionTitle>
         <S.Text>Some of my projects include:</S.Text>

@@ -1,37 +1,33 @@
 import styled, { css } from "styled-components";
 import { theme } from "styles/Theme";
+import { Link } from "react-scroll"
 
 // Menu
 
-const MenuItem = styled.li`
-  position: relative;
-  overflow: hidden;
+const MenuItem = styled.li``
 
-  svg {
-    color: ${ theme.colors.accent };
-    margin-right: 8px;
-
-    position: absolute;
-    left: -100%;
-  }
-
-  &:hover {
-    overflow: visible;
-
-    svg {
-      left: -32px;
-    }
-  }
-`
-
-const Link = styled.a`
+const NavLink = styled(Link)`
   color: ${ theme.colors.primaryFont };
   font-family: "Be Vietnam", sans-serif;
   font-size: 18px;
   font-weight: 400;
 
-  &:hover {
-    color: ${ theme.colors.accent }
+  position: relative;
+  overflow: hidden;
+
+  svg {
+    position: absolute;
+    left: -100%;
+  }
+
+  &:hover, 
+  &.active {
+    overflow: visible;
+    color: ${ theme.colors.accent };
+
+    svg {
+      left: -32px;
+    }
   }
 `
 
@@ -123,7 +119,7 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 
 export const S = {
   MenuItem,
-  Link,
+  Link: NavLink,
   DesktopMenu,
   MobileMenu,
   BurgerButton,
