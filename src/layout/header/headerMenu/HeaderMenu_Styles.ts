@@ -17,7 +17,9 @@ const NavLink = styled(Link)`
 
   svg {
     position: absolute;
-    left: -100%;
+    left: -32px;
+    transform: scale(0);
+    transition: .4s;
   }
 
   &:hover, 
@@ -26,7 +28,7 @@ const NavLink = styled(Link)`
     color: ${ theme.colors.accent };
 
     svg {
-      left: -32px;
+      transform: scale(1);
     }
   }
 `

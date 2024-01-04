@@ -9,7 +9,6 @@ const Footer = styled.footer`
   background-color: ${ theme.colors.secondary };
   position: relative;
   z-index: 1;
-  outline: 1px solid red;
 
   &:after {
     display: block;
@@ -62,6 +61,10 @@ const SocialLink = styled.a`
   span {
     color: #0ACBBF;
     margin-left: 30px;
+  }
+  
+  &:only-child:hover {
+    transform: scale(1.3);
   }
 `
 

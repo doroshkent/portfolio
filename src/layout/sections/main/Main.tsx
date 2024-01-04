@@ -20,11 +20,11 @@ export const Main: React.FC = () => {
               <Typewriter
                 onInit={(typewriter) => {
                   typewriter.pauseFor(1500)
-                    .typeString('web develo')
-                    .pauseFor(1500)
+                    .typeString('web deve')
+                    .pauseFor(500)
                     .deleteAll()
-                    .typeString('react developer')
-                    .pauseFor(1500)
+                    .typeString('react develo')
+                    .pauseFor(500)
                     .deleteAll()
                     .typeString('front-end developer')
                     .start();

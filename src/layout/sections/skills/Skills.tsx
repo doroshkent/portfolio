@@ -6,6 +6,7 @@ import { Skill } from "layout/sections/skills/Skill/Skill";
 import skillsImg from "assets/img/skills.svg"
 import { Container } from "components/Container";
 import { S } from "./Skills_Styles"
+import { Zoom } from "react-awesome-reveal";
 
 const skillsData = [
   {
@@ -89,10 +90,12 @@ export const Skills: React.FC = () => {
           <S.SkillsContentWrapper>
             <S.Text>I have a vast experience in the following web technologies:</S.Text>
             <S.SkillsWrapper>
-              { skillsData.map(s => {
-                return <Skill key={ s.id } iconId={ s.iconId } title={ s.title }
-                              viewBox={ s.viewBox } width={ s.width || "40" } height={ s.height || "40" }/>
-              }) }
+              <Zoom cascade damping={0.07}>
+                { skillsData.map(s => {
+                  return <Skill key={ s.id } iconId={ s.iconId } title={ s.title }
+                                viewBox={ s.viewBox } width={ s.width || "40" } height={ s.height || "40" }/>
+                }) }
+              </Zoom>
             </S.SkillsWrapper>
           </S.SkillsContentWrapper>
           <S.Image src={ skillsImg } alt="" aria-hidden/>
