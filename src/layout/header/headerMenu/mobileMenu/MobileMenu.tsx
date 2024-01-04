@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { S } from "./../HeaderMenu_Styles"
 import { Menu } from "layout/header/headerMenu/menu/Menu";
 
+type MobileMenuPropsType = {
+  isOpen: boolean
+  setIsOpen: (isOpen: boolean) => void
+}
 
-export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: { menuItems: Array<string> }) => {
-  const [ isOpen, setIsOpen ] = useState(false);
-
+export const MobileMenu: React.FC<MobileMenuPropsType> = ({ isOpen, setIsOpen }) => {
   const onBurgerButtonTouchHandler = () => {
     setIsOpen(!isOpen);
   }
@@ -17,7 +19,7 @@ export const MobileMenu: React.FC<{ menuItems: Array<string> }> = (props: { menu
       </S.BurgerButton>
 
       <S.MobileMenuPopup isOpen={ isOpen }>
-        <Menu menuItems={ props.menuItems }/>
+        <Menu />
       </S.MobileMenuPopup>
     </S.MobileMenu>
   );

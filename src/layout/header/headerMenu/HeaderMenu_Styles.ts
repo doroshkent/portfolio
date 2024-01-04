@@ -114,7 +114,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   max-width: 200px;
-  margin-left: auto;
+  position: absolute;
+  right: 10px;
   transform: ${ props => props.isOpen ? "translateY(0)" : "translateY(-100%)"} ;
   opacity: ${ props => props.isOpen ? "1" : "0"} ;
   transition: 0.5s ease-in-out;

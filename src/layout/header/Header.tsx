@@ -6,11 +6,11 @@ import { FlexWrapper } from 'components/FlexWrapper';
 import { DesktopMenu } from "layout/header/headerMenu/desktopMenu/DesktopMenu";
 import { MobileMenu } from "layout/header/headerMenu/mobileMenu/MobileMenu";
 
-const items = [ 'Skills', 'Projects', 'Contact me' ];
-
 export const Header: React.FC = () => {
   const [ width, setWidth ] = useState(window.innerWidth);
   const breakpoint = 576;
+
+  const [ mobileMenuIsOpen, setMobileMenuIsOpen ] = useState(false);
 
   useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth)
@@ -20,11 +20,11 @@ export const Header: React.FC = () => {
   }, []);
 
   return (
-    <S.Header>
+    <S.Header isOpen={mobileMenuIsOpen}>
       <Container>
         <FlexWrapper justify="space-between" align="center">
           <Logo/>
-          { width < breakpoint ? <MobileMenu menuItems={ items }/> : <DesktopMenu menuItems={ items }/> }
+          { width < breakpoint ? <MobileMenu isOpen={mobileMenuIsOpen} setIsOpen={setMobileMenuIsOpen}/> : <DesktopMenu /> }
         </FlexWrapper>
       </Container>
     </S.Header>
