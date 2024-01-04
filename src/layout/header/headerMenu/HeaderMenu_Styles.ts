@@ -1,4 +1,4 @@
-import styled, { css, keyframes } from "styled-components";
+import styled, { css } from "styled-components";
 import { theme } from "styles/Theme";
 
 // Menu
@@ -112,21 +112,12 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
   }
 `
 
-const slideIn = keyframes`
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-`;
-
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
-  transform-origin: top;
-  animation: ${ slideIn } 0.5s ease-in-out;
-  display: ${ props => (props.isOpen ? 'block' : 'none') };
+  max-width: 200px;
+  margin-left: auto;
+  transform: ${ props => props.isOpen ? "translateY(0)" : "translateY(-100%)"} ;
+  opacity: ${ props => props.isOpen ? "1" : "0"} ;
+  transition: 0.5s ease-in-out;
 `
 
 export const S = {

@@ -18,7 +18,7 @@ export const Contact: React.FC = () => {
             <S.Field placeholder="Enter message..." as="textarea"/>
             <S.SubmitButton type="submit">
               Send Message
-              <IoSend style={ { color: "#81d6f4", transform: "translate(4px, 3px)" } }/>
+              <IoSend style={ { color: "#81d6f4", transform: "translate(10px, 3px)" } }/>
             </S.SubmitButton>
           </S.Form>
         </FlexWrapper>

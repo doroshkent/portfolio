@@ -12,7 +12,6 @@ const Skills = styled.section`
 `
 
 const SkillsContentWrapper = styled.div`
-  margin-right: 40px;
   flex-grow: 1;
 
   @media screen and (max-width: 1003px) {

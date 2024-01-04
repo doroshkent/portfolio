@@ -9,11 +9,11 @@ type FontPropsType = {
   letterSpacing?: string
 }
 
-export const font = ({weight, color, height, Fmin, Fmax, letterSpacing}: FontPropsType) => `
+export const font = ({ weight, color, height, Fmin, Fmax, letterSpacing }: FontPropsType) => `
   font-family: 'Be Vietnam Pro', sans-serif;
-  font-weight: ${weight || '400'};
-  color: ${color || theme.colors.primaryFont};
-  line-height: ${height || '1.2'};
-  font-size: calc( (100vw - 360px)/(1440 - 360) * (${Fmax} - ${Fmin}) + ${Fmin}px);
-  letter-spacing: ${letterSpacing || 'normal'};
+  font-weight: ${ weight || '400' };
+  color: ${ color || theme.colors.primaryFont };
+  line-height: ${ height || '1.2' };
+  font-size: calc( (100vw - 360px)/(1440 - 360) * (${ Fmax } - ${ Fmin }) + ${ Fmin }px);
+  letter-spacing: ${ letterSpacing || 'normal' };
 `

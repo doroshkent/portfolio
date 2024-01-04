@@ -45,9 +45,13 @@ const Field = styled.input`
 `
 
 const SubmitButton = styled(Button)`
-  background-color: #343D68;
+  background-color: rgba(52, 61, 104);
   padding: 12px 24px;
   position: relative;
+
+  &:hover {
+    background-color: rgba(52, 61, 104, 0.94);
+  }
 `
 
 const Image = styled.img`

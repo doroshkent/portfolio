@@ -65,6 +65,10 @@ const ProjectButton = styled(Button)`
     left: 4px;
     top: 2px;
   }
+  
+  &:hover {
+    background-color: rgb(52, 61, 104);
+  }
 `
 
 export const S = {
