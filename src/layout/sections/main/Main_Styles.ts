@@ -101,6 +101,9 @@ const MainHeading = styled.h1`
   font-feature-settings: 'clig' off, 'liga' off;
   ${ font({ color: theme.colors.secondary, weight: 600, letterSpacing: "0.18px", Fmax: 48, Fmin: 28 }) }
   text-transform: capitalize;
+  p {
+    display: none;
+  }
 `
 
 const Text = styled.p`

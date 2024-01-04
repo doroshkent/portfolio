@@ -5,6 +5,7 @@ import largePhoto from "assets/img/photo/photo@3x.webp";
 import { FlexWrapper } from 'components/FlexWrapper';
 import { Container } from "components/Container";
 import { S } from "layout/sections/main/Main_Styles";
+import Typewriter from 'typewriter-effect';
 
 export const Main: React.FC = () => {
   return (
@@ -13,7 +14,19 @@ export const Main: React.FC = () => {
         <FlexWrapper align="center" justify="space-between" wrap="wrap-reverse">
           <S.DescriptionWrapper>
             <S.SmallText>Hi👋, I’m a </S.SmallText>
-            <S.MainHeading>front-end developer</S.MainHeading>
+            <S.MainHeading>
+              <p>front-end developer</p>
+              <Typewriter
+                onInit={(typewriter) => {
+                  typewriter.pauseFor(1500)
+                    .typeString('web')
+                    .pauseFor(1500)
+                    .deleteAll()
+                    .typeString('front-end developer')
+                    .start();
+                }}
+              />
+            </S.MainHeading>
             <S.Text>
               I’m <span>Anastasiya Darashkevich</span>, a developer dedicated to making the world a better place
               one
