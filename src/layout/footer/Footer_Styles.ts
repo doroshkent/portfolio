@@ -65,6 +65,10 @@ const SocialLink = styled.a`
   
   &:only-child:hover {
     transform: scale(1.3);
+
+    @media ${theme.media.mobile} {
+      transform: none;
+    }
   }
 `
 

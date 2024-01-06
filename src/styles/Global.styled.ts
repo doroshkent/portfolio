@@ -33,6 +33,10 @@ export const GlobalStyle = createGlobalStyle`
 
     &:hover {
       transform: scale(1.1);
+
+      @media ${theme.media.mobile} {
+        transform: none;
+      }
     }
   }
   
