@@ -5,7 +5,7 @@ import { Button } from "components/button/Button";
 const Contact = styled.section`
   padding-bottom: 180px;
 
-  @media ${theme.media.mobile} {
+  @media ${ theme.media.mobile } {
     padding-bottom: 84px;
   }
 `
@@ -24,8 +24,8 @@ const Form = styled.form`
     resize: none;
     height: 158px;
   }
-  
-  @media ${theme.media.tablet} {
+
+  @media ${ theme.media.tablet } {
     margin: 0 auto;
   }
 `
@@ -48,7 +48,7 @@ const Field = styled.input`
   }
 `
 
-const SubmitButton = styled(Button)`
+const SubmitButton = styled( Button )`
   background-color: rgba(52, 61, 104);
   padding: 12px 24px;
   position: relative;

@@ -9,7 +9,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
-  
+
   body {
     margin: 0;
     font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -24,7 +24,7 @@ export const GlobalStyle = createGlobalStyle`
   ul {
     list-style: none;
   }
-  
+
   a {
     text-decoration: none;
     cursor: pointer;
@@ -34,30 +34,30 @@ export const GlobalStyle = createGlobalStyle`
     &:hover {
       transform: scale(1.1);
 
-      @media ${theme.media.mobile} {
+      @media ${ theme.media.mobile } {
         transform: none;
       }
     }
   }
-  
+
   button {
     border: unset;
     background-color: unset;
   }
-  
+
   section {
     padding: 80px 0;
   }
-  
+
   section:first-of-type,
   section:nth-of-type(even) {
-    background-color: ${theme.colors.primary};
+    background-color: ${ theme.colors.primary };
   }
-  
-  section:nth-of-type(2n+3){
-    background-color: ${theme.colors.secondary};
+
+  section:nth-of-type(2n+3) {
+    background-color: ${ theme.colors.secondary };
   }
-  
+
   p {
     font-size: 18px;
     font-weight: 400;

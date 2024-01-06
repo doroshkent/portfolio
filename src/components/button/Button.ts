@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { theme } from "styles/Theme";
 
 export const Button = styled.button`
-  color: ${theme.colors.secondaryFont};
+  color: ${ theme.colors.secondaryFont };
   font-family: 'Be Vietnam Pro', sans-serif;
   font-size: 18px;
   font-weight: 400;
@@ -13,8 +13,8 @@ export const Button = styled.button`
 
   &:hover {
     transform: scale(1.1);
-    
-    @media ${theme.media.mobile} {
+
+    @media ${ theme.media.mobile } {
       transform: none;
     }
   }

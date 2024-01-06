@@ -20,19 +20,19 @@ const menuItems = [
 export const Menu: React.FC = () => {
   return (
     <ul role="menu">
-      { menuItems.map((item, index) => {
+      { menuItems.map( (item, index) => {
         return <S.MenuItem key={ index } role="menuitem">
           <S.Link activeClass="active"
-                  to={item.href}
-                  spy={true}
-                  smooth={true}
-                  offset={-70}
+                  to={ item.href }
+                  spy={ true }
+                  smooth={ true }
+                  offset={ -70 }
           >
-            <Icon iconId="gears" width="25" height="23" viewBox="0 0 25 23"/>
+            <Icon iconId="gears" width="25" height="23" viewBox="0 0 25 23" />
             { item.title }
           </S.Link>
         </S.MenuItem>
-      }) }
+      } ) }
     </ul>
   );
 };

@@ -6,7 +6,7 @@ import { Link } from "react-scroll"
 
 const MenuItem = styled.li``
 
-const NavLink = styled(Link)`
+const NavLink = styled( Link )`
   color: ${ theme.colors.primaryFont };
   font-family: "Be Vietnam", sans-serif;
   font-size: 18px;
@@ -22,7 +22,7 @@ const NavLink = styled(Link)`
     transition: .4s;
   }
 
-  &:hover, 
+  &:hover,
   &.active {
     overflow: visible;
     color: ${ theme.colors.accent };
@@ -114,8 +114,8 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
   max-width: 200px;
   position: absolute;
   right: 10px;
-  transform: ${ props => props.isOpen ? "translateY(0)" : "translateY(-100%)"} ;
-  opacity: ${ props => props.isOpen ? "1" : "0"} ;
+  transform: ${ props => props.isOpen ? "translateY(0)" : "translateY(-100%)" };
+  opacity: ${ props => props.isOpen ? "1" : "0" };
   transition: 0.5s ease-in-out;
 `
 

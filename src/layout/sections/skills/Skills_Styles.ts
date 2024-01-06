@@ -40,7 +40,7 @@ const SkillsWrapper = styled.div`
 
 const Text = styled.p`
   margin-bottom: 50px;
-  ${font({Fmax: 18, Fmin: 16, color: "#818080"})}
+  ${ font( { Fmax: 18, Fmin: 16, color: "#818080" } ) }
 `
 
 const Image = styled.img`
@@ -48,7 +48,7 @@ const Image = styled.img`
     margin: 0 auto 43px;
     max-width: 420px;
   }
-  
+
   @media ${ theme.media.mobile } {
     max-width: 250px;
   }
@@ -69,18 +69,18 @@ const IconWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(${polygon});
+  background-image: url(${ polygon });
   background-repeat: no-repeat;
   background-size: 85%;
   background-position: center;
-  
-  @media ${theme.media.mobile} {
+
+  @media ${ theme.media.mobile } {
     width: 118px;
     height: 118px;
   }
-  
+
   svg {
-    @media ${theme.media.mobile} {
+    @media ${ theme.media.mobile } {
       transform: scale(1.6);
     }
   }
@@ -88,7 +88,7 @@ const IconWrapper = styled.div`
 
 const SkillTitle = styled.h3`
   text-align: center;
-  ${font({height: 1.8, Fmax: 16, Fmin: 18})};
+  ${ font( { height: 1.8, Fmax: 16, Fmin: 18 } ) };
   text-transform: capitalize;
 `
 

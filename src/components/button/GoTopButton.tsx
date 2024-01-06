@@ -5,17 +5,17 @@ import { theme } from "styles/Theme";
 import { animateScroll as scroll } from "react-scroll";
 
 export const GoTopButton = () => {
-  const [ showBtn, setShowBtn ] = useState<boolean>(false);
+  const [ showBtn, setShowBtn ] = useState<boolean>( false );
 
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
+  useEffect( () => {
+    window.addEventListener( "scroll", () => {
       if (window.scrollY > 400) {
-        setShowBtn(true)
+        setShowBtn( true )
       } else {
-        setShowBtn(false)
+        setShowBtn( false )
       }
-    })
-  }, [])
+    } )
+  }, [] )
 
   const scrollToTop = () => scroll.scrollToTop();
 
@@ -23,7 +23,7 @@ export const GoTopButton = () => {
     <>
       { showBtn &&
         <StyledGoTopButton onClick={ scrollToTop }>
-          <FaArrowUp color={ theme.colors.primary }/>
+          <FaArrowUp color={ theme.colors.primary } />
         </StyledGoTopButton> }
     </>
   );

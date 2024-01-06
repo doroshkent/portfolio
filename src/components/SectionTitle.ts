@@ -10,12 +10,12 @@ type SectionTitlePropsType = {
 export const SectionTitle = styled.h2<SectionTitlePropsType>`
   text-align: center;
   margin-bottom: ${ props => props.marginBottom || "60px" };
-  ${ props => font({
+  ${ props => font( {
     weight: 500,
     Fmax: 40,
     Fmin: 25,
     color: props.isWhite ? theme.colors.tertiaryFont : theme.colors.accent
-  }) };
+  } ) };
 
   @media ${ theme.media.mobile } {
     margin-bottom: ${ props => props.marginBottom || "50px" };

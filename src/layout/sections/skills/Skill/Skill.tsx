@@ -14,7 +14,7 @@ export const Skill: React.FC<SkillPropsType> = ({ iconId, title, viewBox, height
   return (
     <S.Skill>
       <S.IconWrapper>
-        <Icon iconId={ iconId } width={ width } height={ height } viewBox={ viewBox }/>
+        <Icon iconId={ iconId } width={ width } height={ height } viewBox={ viewBox } />
       </S.IconWrapper>
       <S.SkillTitle>{ title }</S.SkillTitle>
     </S.Skill>

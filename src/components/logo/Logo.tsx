@@ -8,8 +8,8 @@ export const Logo: React.FC = () => {
   const scrollToTop = () => scroll.scrollToTop();
 
   return (
-    <LogoLink onClick={scrollToTop}>
-      <LogoIcon src={ logo } alt="logo"/>
+    <LogoLink onClick={ scrollToTop }>
+      <LogoIcon src={ logo } alt="logo" />
     </LogoLink>
   );
 };

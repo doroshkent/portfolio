@@ -90,15 +90,15 @@ export const Skills: React.FC = () => {
           <S.SkillsContentWrapper>
             <S.Text>I have a vast experience in the following web technologies:</S.Text>
             <S.SkillsWrapper>
-              <Zoom cascade damping={0.07}>
-                { skillsData.map(s => {
+              <Zoom cascade damping={ 0.07 }>
+                { skillsData.map( s => {
                   return <Skill key={ s.id } iconId={ s.iconId } title={ s.title }
-                                viewBox={ s.viewBox } width={ s.width || "40" } height={ s.height || "40" }/>
-                }) }
+                                viewBox={ s.viewBox } width={ s.width || "40" } height={ s.height || "40" } />
+                } ) }
               </Zoom>
             </S.SkillsWrapper>
           </S.SkillsContentWrapper>
-          <S.Image src={ skillsImg } alt="" aria-hidden/>
+          <S.Image src={ skillsImg } alt="" aria-hidden />
         </FlexWrapper>
       </Container>
     </S.Skills>

@@ -43,34 +43,34 @@ export const Main: React.FC = () => {
                 ? "front-end developer"
                 : <Typewriter
                   options={ {
-                    strings: ["Web developer", "React Developer", "Frond-end developer"],
+                    strings: [ "Web developer", "React Developer", "Frond-end developer" ],
                     autoStart: true,
                     loop: true
                   }
                   }
                 /> }
-                <p>front-end developer</p>
-                </S.MainHeading>
-                <S.Text>
-                I’m <span>Anastasiya Darashkevich</span>, a developer dedicated to making the world a better place
-                one
-                line of code at a time.
-                </S.Text>
-                <S.HireMeButton onClick={ scrollToContactHandler }>Hire me</S.HireMeButton>
-                </S.DescriptionWrapper>
-                <S.PhotoWrapper>
-                <Tilt tiltMaxAngleX={ 40 }
-                tiltMaxAngleY={ 40 }
-                perspective={ 800 }
-                transitionSpeed={ 1500 }
-                scale={ 1.1 }
-                gyroscope={ true }>
-                <S.Photo src={ photo } alt="Anastasiya Darashkevich photo"
-                srcSet={ `${ mediumPhoto } 2x, ${ largePhoto } 3x` } />
-                </Tilt>
-                </S.PhotoWrapper>
-                </FlexWrapper>
-                </Container>
-                </S.Main>
-                );
-              };
+              <p>front-end developer</p>
+            </S.MainHeading>
+            <S.Text>
+              I’m <span>Anastasiya Darashkevich</span>, a developer dedicated to making the world a better place
+              one
+              line of code at a time.
+            </S.Text>
+            <S.HireMeButton onClick={ scrollToContactHandler }>Hire me</S.HireMeButton>
+          </S.DescriptionWrapper>
+          <S.PhotoWrapper>
+            <Tilt tiltMaxAngleX={ 40 }
+                  tiltMaxAngleY={ 40 }
+                  perspective={ 800 }
+                  transitionSpeed={ 1500 }
+                  scale={ 1.1 }
+                  gyroscope={ true }>
+              <S.Photo src={ photo } alt="Anastasiya Darashkevich photo"
+                       srcSet={ `${ mediumPhoto } 2x, ${ largePhoto } 3x` } />
+            </Tilt>
+          </S.PhotoWrapper>
+        </FlexWrapper>
+      </Container>
+    </S.Main>
+  );
+};

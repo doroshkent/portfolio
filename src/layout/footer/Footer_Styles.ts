@@ -62,11 +62,11 @@ const SocialLink = styled.a`
     color: #0ACBBF;
     margin-left: 30px;
   }
-  
+
   &:only-child:hover {
     transform: scale(1.3);
 
-    @media ${theme.media.mobile} {
+    @media ${ theme.media.mobile } {
       transform: none;
     }
   }
@@ -74,7 +74,7 @@ const SocialLink = styled.a`
 
 const Text = styled.p`
   margin-bottom: 34px;
-  ${ font({ weight: 500, color: theme.colors.secondaryFont, Fmax: 20, Fmin: 18 }) };
+  ${ font( { weight: 500, color: theme.colors.secondaryFont, Fmax: 20, Fmin: 18 } ) };
 
   @media ${ theme.media.mobile } {
     font-weight: 400;

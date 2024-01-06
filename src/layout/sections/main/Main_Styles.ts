@@ -86,7 +86,7 @@ const DescriptionWrapper = styled.div`
   @media ${ theme.media.mobile } {
     margin: 0 30px;
   }
-  
+
   @media screen and (max-width: 937px) {
     margin: 0 auto;
   }
@@ -94,13 +94,14 @@ const DescriptionWrapper = styled.div`
 
 const SmallText = styled.span`
   font-feature-settings: 'clig' off, 'liga' off;
-  ${ font({ color: theme.colors.secondary, weight: 600, letterSpacing: "0.18px", Fmax: 32, Fmin: 22 }) }
+  ${ font( { color: theme.colors.secondary, weight: 600, letterSpacing: "0.18px", Fmax: 32, Fmin: 22 } ) }
 `
 
 const MainHeading = styled.h1`
   font-feature-settings: 'clig' off, 'liga' off;
-  ${ font({ color: theme.colors.secondary, weight: 600, letterSpacing: "0.18px", Fmax: 48, Fmin: 28 }) }
+  ${ font( { color: theme.colors.secondary, weight: 600, letterSpacing: "0.18px", Fmax: 48, Fmin: 28 } ) }
   text-transform: capitalize;
+
   p {
     display: none;
   }
@@ -122,7 +123,7 @@ const Text = styled.p`
   }
 `
 
-const HireMeButton = styled(Button)`
+const HireMeButton = styled( Button )`
   background-color: ${ theme.colors.accent };
   padding: 8px 16px;
   box-shadow: 0 1px 5px 0 rgba(0, 0, 0, 0.20), 0 3px 1px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.14);

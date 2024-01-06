@@ -22,7 +22,7 @@ const Text = styled.p`
   text-align: center;
   margin-bottom: 60px;
 
-  ${ font({ color: "inherit", Fmax: 18, Fmin: 16 }) } @media ${ theme.media.mobile } {
+  ${ font( { color: "inherit", Fmax: 18, Fmin: 16 } ) } @media ${ theme.media.mobile } {
     text-align: left;
     margin-bottom: 30px;
   }
@@ -31,19 +31,19 @@ const Text = styled.p`
 // Project
 
 const Project = styled.div`
-  background-color: #262C4D; 
+  background-color: #262C4D;
   width: 300px;
   flex-grow: 1;
-  
+
   border: 4px solid;
-  border-image: repeating-linear-gradient( 290deg, #0D54BE, #20ECD3) 1;
+  border-image: repeating-linear-gradient(290deg, #0D54BE, #20ECD3) 1;
 `
 
 const Description = styled.p`
   text-align: center;
   padding: 0 10px;
-  
-  ${font({color: "inherit", Fmax: 16, Fmin: 14})}
+
+  ${ font( { color: "inherit", Fmax: 16, Fmin: 14 } ) }
 `
 
 const Image = styled.img`
@@ -52,7 +52,7 @@ const Image = styled.img`
   object-fit: cover;
 `
 
-const ProjectButton = styled(Button)`
+const ProjectButton = styled( Button )`
   padding: 10px 16px;
   margin-bottom: 20px;
   border: 2px solid #FFF;
@@ -60,12 +60,12 @@ const ProjectButton = styled(Button)`
   text-transform: uppercase;
 
   &::after {
-    content: url(${arrowIcon});
+    content: url(${ arrowIcon });
     position: relative;
     left: 4px;
     top: 2px;
   }
-  
+
   &:hover {
     background-color: rgb(52, 61, 104);
   }

@@ -9,7 +9,7 @@ type MobileMenuPropsType = {
 
 export const MobileMenu: React.FC<MobileMenuPropsType> = ({ isOpen, setIsOpen }) => {
   const onBurgerButtonTouchHandler = () => {
-    setIsOpen(!isOpen);
+    setIsOpen( !isOpen );
   }
 
   return (

@@ -28,8 +28,8 @@ export const Projects: React.FC = () => {
         <SectionTitle isWhite>Projects</SectionTitle>
         <S.Text>Some of my projects include:</S.Text>
         <FlexWrapper justify="space-between" wrap="wrap" gap="50px">
-          { projectsData.map(p => <Project key={ p.id } src={ p.src }
-                                           description={ p.description }/>) }
+          { projectsData.map( p => <Project key={ p.id } src={ p.src }
+                                            description={ p.description } /> ) }
         </FlexWrapper>
       </Container>
     </S.Projects>

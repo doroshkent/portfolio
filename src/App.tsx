@@ -11,13 +11,13 @@ import { GoTopButton } from "components/button/GoTopButton";
 function App() {
   return (
     <div className="App">
-      <Header/>
-      <Main/>
-      <Skills/>
-      <Projects/>
-      <Contact/>
-      <Footer/>
-      <GoTopButton/>
+      <Header />
+      <Main />
+      <Skills />
+      <Projects />
+      <Contact />
+      <Footer />
+      <GoTopButton />
     </div>
   );
 }
