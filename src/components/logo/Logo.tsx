@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "assets/img/logo.png";
+import logo from "assets/img/logo.svg";
 import styled from "styled-components";
 import { theme } from "styles/Theme";
 import { animateScroll as scroll } from "react-scroll";
