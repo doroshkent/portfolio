@@ -8,14 +8,20 @@ export const GoTopButton = () => {
   const [ showBtn, setShowBtn ] = useState<boolean>( false );
 
   useEffect( () => {
-    window.addEventListener( "scroll", () => {
+    const handleScroll = () => {
       if (window.scrollY > 400) {
-        setShowBtn( true )
+        setShowBtn( true );
       } else {
-        setShowBtn( false )
+        setShowBtn( false );
       }
-    } )
-  }, [] )
+    };
+
+    window.addEventListener( "scroll", handleScroll );
+
+    return () => {
+      window.removeEventListener( "scroll", handleScroll );
+    };
+  }, [] );
 
   const scrollToTop = () => scroll.scrollToTop();
 
