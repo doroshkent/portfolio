@@ -50,6 +50,7 @@ const Image = styled.img`
   height: 276px;
   width: 100%;
   object-fit: cover;
+  object-position: left;
 `
 
 const ProjectButton = styled( Button )`
